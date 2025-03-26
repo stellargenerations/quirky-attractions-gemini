@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- CONFIGURATION ---
+    // --- CONFIGURATION --
     const googleSheetCsvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQcrExOdmNWQbpkckNmBd9--axnuoDa9KxDQB8vayVHJL_P3a36mNQZPfb1wrOL0Xiv0e-PkKg1wA-x/pub?output=csv'; // <-- PASTE YOUR URL HERE
     const initialCoords = [39.8283, -98.5795]; // Center of the US
     const initialZoom = 4;
