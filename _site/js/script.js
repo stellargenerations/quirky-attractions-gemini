@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
      */
     async function fetchData() {
         if (!googleSheetCsvUrl || googleSheetCsvUrl === 'YOUR_PUBLISHED_GOOGLE_SHEET_CSV_URL') {
-            displayError("Configuration error: Google Sheet URL is not set in js/main.js.", listErrorMessage);
+            displayError("Configuration error: Google Sheet URL is not set in js/script.js.", listErrorMessage);
              if (listLoadingMessage) listLoadingMessage.style.display = 'none';
             return;
         }
