@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quirky Roadside Attractions USA</title>
+    <meta name="description" content="Explore unique and quirky roadside attractions across the United States on an interactive map.">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/>
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin="" defer></script>
+
+    <script src="/js/main.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <h1>Quirky Roadside Attractions USA</h1>
+        <nav aria-label="Breadcrumb" class="breadcrumbs">
+            <ol>
+                <li><a href="/">Home</a></li>
+                <li><span aria-current="page">Attractions Map</span></li>
+            </ol>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="filters-container" aria-labelledby="filters-heading">
+            <h2 id="filters-heading">Filter Attractions</h2>
+            <div class="filter-controls">
+                <div class="filter-group">
+                    <label for="category-filter">By Category:</label>
+                    <select id="category-filter" name="category">
+                        <option value="all">All Categories</option>
+                        </select>
+                </div>
+                <div class="filter-group">
+                    <label for="state-filter">By State:</label>
+                    <select id="state-filter" name="state">
+                        <option value="all">All States</option>
+                        </select>
+                </div>
+                 <button id="reset-filters-btn" type="button">Reset Filters</button>
+            </div>
+             <p id="filter-error" class="error-message" role="alert" aria-live="assertive" style="display: none;"></p>
+        </section>
+
+        <section class="map-container" aria-label="Interactive Map of Attractions">
+            <div id="map">
+                 <p class="loading-message">Loading Map...</p>
+            </div>
+        </section>
+
+        <section class="list-container" aria-labelledby="list-heading">
+             <h2 id="list-heading">Attractions List</h2>
+             <p id="list-loading-message" class="loading-message" role="status">Loading attractions...</p>
+             <p id="list-error-message" class="error-message" role="alert" aria-live="assertive" style="display: none;"></p>
+            <div id="attraction-list">
+                </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="current-year"></span> Quirky Attractions Finder. Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors.</p>
+    </footer>
+
+    <script>
+      // Simple script to update copyright year
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
