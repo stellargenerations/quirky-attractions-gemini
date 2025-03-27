@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
      * Fetches and parses attraction data from the Google Sheet CSV.
      */
     async function fetchData() {
-        if (!googleSheetCsvUrl || googleSheetCsvUrl === 'YOUR_PUBLISHED_GOOGLE_SHEET_CSV_URL') {
+        if (!googleSheetCsvUrl || googleSheetCsvUrl === 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQcrExOdmNWQbpkckNmBd9--axnuoDa9KxDQB8vayVHJL_P3a36mNQZPfb1wrOL0Xiv0e-PkKg1wA-x/pub?gid=0&single=true&output=csv') {
             displayError("Configuration error: Google Sheet URL is not set in js/script.js.", listErrorMessage);
              if (listLoadingMessage) listLoadingMessage.style.display = 'none';
             return;
